@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Router, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Main from './pages/Main.jsx'
 import Nav from './components/Header.jsx'
 import MovieList from './pages/MovieList.jsx'
@@ -11,7 +11,7 @@ function App() {
             <Routes>
                 <Route index element={<Main />}></Route>
                 <Route path="/list/:type" element={<MovieList />}></Route>
-                <Route path="/detail/:id" element={<MovieDetail />}></Route>
+                <Route path="/movie/:id" element={<MovieDetail />}></Route>
             </Routes>
         </BrowserRouter>
     )

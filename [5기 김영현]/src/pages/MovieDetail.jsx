@@ -21,7 +21,7 @@ function MovieDetail() {
     }
 
     return (
-        <div className="relative w-full flex flex-col items-center">
+        <div className="relative w-full flex flex-col items-center text-white">
             <div className="w-4/5">
                 <div className="backdrop w-full">
                     <img
