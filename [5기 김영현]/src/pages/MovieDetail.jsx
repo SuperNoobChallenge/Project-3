@@ -58,7 +58,7 @@ function MovieDetail() {
                         </div>
                     </div>
                     <div className="my-10">
-                        <h5 className="text-xl mb-6">소개글(Synopsis)</h5>
+                        <h5 className="text-xl mb-6">소개글(5기 김영현)</h5>
                         <p>{movie.overview}</p>
                     </div>
                 </div>

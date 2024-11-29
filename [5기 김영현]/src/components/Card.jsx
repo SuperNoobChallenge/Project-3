@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton'
-import 'react-loading-skeleton/dist/skeleton.css'
+// import 'react-loading-skeleton/dist/skeleton.css'
 import { Link } from 'react-router-dom'
 
 function Card({ movie }) {
@@ -30,7 +30,7 @@ function Card({ movie }) {
                         <div className="absolute inset-0 p-4 flex flex-col justify-end opacity-0 hover:opacity-100 transition-opacity duration-200 text-white">
                             <h4 className="font-extrabold text-lg mb-1">{movie.original_title}</h4>
                             <h5 className="flex items-center gap-1 text-sm mb-1">
-                                {movie.release_date} / ⭐ {movie.vote_average}
+                                {movie.release_date} / ⭐ {movie.vote_average} / 5기 김영현
                             </h5>
                             <p className="italic text-sm mb-1 w-[85%]">{movie.overview.slice(0, 50) + '...'}</p>
                         </div>
