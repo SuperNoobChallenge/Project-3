@@ -1,37 +1,39 @@
 import { useState, useEffect } from 'react'
 import { config } from '../data/contant'
-import { Link, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
+import SearBox from '../components/SearchBox.jsx'
+import Card from '../components/Card.jsx'
 
 function MovieList() {
-    const [movieList, setMoiveList] = useState([])
-
     const param = useParams()
+    const [movieList, setMovieList] = useState([])
+    const [loading, setLoading] = useState(true)
+    const [keyword, setKeyword] = useState('')
+    const onChangeKeyword = (e) => {
+        setKeyword(e.target.value)
+    }
 
     useEffect(() => {
         fetch(`https://api.themoviedb.org/3/movie/${param.type}?language=ko-KR&api_key=${config.API_KEY}`)
             .then((res) => res.json())
             .then((res) => {
-                setMoiveList(res.results)
+                setMovieList(res.results)
+                setLoading(false)
             })
     }, [param.type])
+
     return (
-        <>
-            <div>
-                <ul>
-                    {movieList.map((movie) => (
-                        <li key={movie.id}>
-                            <img
-                                src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
-                                width={200}
-                                height={200}
-                                alt="썸네일"
-                            />
-                            <Link to={`/detail/${movie.id}`}>{movie.original_title}</Link>
-                        </li>
+        <div className="p-12">
+            <SearBox keyword={keyword} onChangeKeyword={onChangeKeyword} />
+            <h2 className="text-xl my-10">영화목록</h2>
+            <div className="flex flex-wrap justify-center">
+                {movieList
+                    .filter((movie) => movie.original_title.toLowerCase().includes(keyword.toLowerCase()))
+                    .map((movie) => (
+                        <Card key={movie.id} movie={movie} />
                     ))}
-                </ul>
             </div>
-        </>
+        </div>
     )
 }
 

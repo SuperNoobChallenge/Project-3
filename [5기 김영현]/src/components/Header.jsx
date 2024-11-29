@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 
-function Nav() {
+function Header() {
     return (
         <div className="flex justify-between items-center mx-10 py-2">
             <div className="flex items-center gap-12 text-lg text-white">
@@ -19,4 +19,4 @@ function Nav() {
     )
 }
 
-export default Nav
+export default Header

@@ -1,8 +1,8 @@
 import { BrowserRouter, Route, Router, Routes } from 'react-router-dom'
-import Main from './pages/Main'
-import Nav from './components/Nav'
-import MovieList from './pages/MovieList'
-import MovieDetail from './pages/MovieDetail'
+import Main from './pages/Main.jsx'
+import Nav from './components/Header.jsx'
+import MovieList from './pages/MovieList.jsx'
+import MovieDetail from './pages/MovieDetail.jsx'
 
 function App() {
     return (
