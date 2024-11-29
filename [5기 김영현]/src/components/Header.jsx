@@ -14,6 +14,7 @@ function Header() {
                 <Link to="/list/popular">인기순</Link>
                 <Link to="/list/top_rated">평가순</Link>
                 <Link to="/list/upcoming">개봉예정</Link>
+                <Link to="https://github.com/SuperNoobChallenge">5기 김영현</Link>
             </div>
         </div>
     )
