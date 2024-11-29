@@ -26,3 +26,8 @@
 ::-webkit-scrollbar-thumb:active {
     background: theme('colors.scrollbarThumbActive');
 }
+
+/* Custom Overlay Color */
+.bg-black {
+    background-color: rgba(0, 0, 0, 0.827); /* 어두운 오버레이 색상 */
+}

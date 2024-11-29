@@ -23,7 +23,7 @@ function MovieList() {
     }, [param.type])
 
     return (
-        <div className="p-12">
+        <div className="p-12 text-white">
             <SearBox keyword={keyword} onChangeKeyword={onChangeKeyword} />
             <h2 className="text-xl my-10">영화목록</h2>
             <div className="flex flex-wrap justify-center">
